@@ -8,7 +8,7 @@ import java.awt.event.*;
 public class StudentFeeForm extends JFrame implements ActionListener {
 
     Choice crollno;
-    JComboBox cbcourse, cbbranch, cbsemester;
+    JComboBox<String> cbcourse, cbbranch, cbsemester;
     JLabel labeltotal;
     JButton update, pay, back;
 
@@ -99,7 +99,7 @@ public class StudentFeeForm extends JFrame implements ActionListener {
         add(lblcourse);
 
         String course[] = {"BTech", "BBA", "BCA", "Bsc", "Msc", "MBA", "MCA", "MCom", "MA", "BA"};
-        cbcourse = new JComboBox(course);
+        cbcourse = new JComboBox<>(course);
         cbcourse.setBounds(200, 180, 150, 20);
         cbcourse.setBackground(Color.WHITE);
         add(cbcourse);
@@ -110,7 +110,7 @@ public class StudentFeeForm extends JFrame implements ActionListener {
         add(lblbranch);
 
         String branch[] = {"Computer Science", "Electronics", "Mechanical", "Civil", "IT"};
-        cbbranch = new JComboBox(branch);
+        cbbranch = new JComboBox<>(branch);
         cbbranch.setBounds(200, 220, 150, 20);
         cbbranch.setBackground(Color.WHITE);
         add(cbbranch);
@@ -121,7 +121,7 @@ public class StudentFeeForm extends JFrame implements ActionListener {
         add(lblsemester);
 
         String semester[] = {"Semester1", "Semester2", "Semester3", "Semester4", "Semester5", "Semester6", "Semester7", "Semester8" };
-        cbsemester = new JComboBox(semester);
+        cbsemester = new JComboBox<>(semester);
         cbsemester.setBounds(200, 260, 150, 20);
         cbsemester.setBackground(Color.WHITE);
         add(cbsemester);

@@ -8,7 +8,7 @@ import java.awt.event.*;
 public class EnterMarks extends JFrame implements ActionListener {
 
     Choice crollno;
-    JComboBox cbsemester;
+    JComboBox<String> cbsemester;
     JTextField tfsub1, tfsub2,tfsub3,tfsub4,tfsub5,tfmarks1,tfmarks2,tfmarks3,tfmarks4,tfmarks5;
     JButton cancel, submit;
 
@@ -55,7 +55,7 @@ public class EnterMarks extends JFrame implements ActionListener {
         add(lblsemester);
 
         String semester[] = {"1st Semester", "2nd Semester", "3rd Semester", "4th Semester", "5th Semester", "6th Semester", "7th Semester", "8th Semester" };
-        cbsemester = new JComboBox(semester);
+        cbsemester = new JComboBox<>(semester);
         cbsemester.setBounds(200, 110, 150, 20);
         cbsemester.setBackground(Color.WHITE);
         add(cbsemester);

@@ -1,3 +1,4 @@
+
 package university_management_system;
 
 import javax.swing.*;
@@ -11,7 +12,7 @@ public class AddStudent extends JFrame implements ActionListener{
     JTextField tfname, tffname, tfaddress, tfphone, tfemail, tfx, tfxii, tfaadhar;
     JLabel labelrollno;
     JDateChooser dcdob;
-    JComboBox cbcourse, cbbranch;
+    JComboBox<String> cbcourse, cbbranch;
     JButton submit, cancel;
 
     Random ran = new Random();
@@ -126,7 +127,7 @@ public class AddStudent extends JFrame implements ActionListener{
         add(lblcourse);
 
         String course[] = {"B.Tech", "BBA", "BCA", "Bsc", "Msc", "MBA", "MCA", "MCom", "MA", "BA"};
-        cbcourse = new JComboBox(course);
+        cbcourse = new JComboBox<>(course);
         cbcourse.setBounds(200, 400, 150, 30);
         cbcourse.setBackground(Color.WHITE);
         add(cbcourse);
@@ -137,7 +138,7 @@ public class AddStudent extends JFrame implements ActionListener{
         add(lblbranch);
 
         String branch[] = {"Computer Science", "Electronics", "Mechanical", "Civil", "IT"};
-        cbbranch = new JComboBox(branch);
+        cbbranch = new JComboBox<>(branch);
         cbbranch.setBounds(600, 400, 150, 30);
         cbbranch.setBackground(Color.WHITE);
         add(cbbranch);

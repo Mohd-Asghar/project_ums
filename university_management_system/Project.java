@@ -167,18 +167,36 @@ public class Project extends JFrame implements ActionListener {
 
         if (msg.equals("Exit")) {
             setVisible(false);
+        // Replace the following block of code in your actionPerformed method:
+
+//       } else if (msg.equals("Calculator")) {
+//         try {
+//              Runtime.getRuntime().exec("calc.exe");
+//             } catch (Exception e) {
+
+//        }
+//       } else if (msg.equals("Notepad")) {
+//          try {
+//               Runtime.getRuntime().exec("notepad.exe");
+//              } catch (Exception e) {
+
+//              }
+        
+        // with the following code:
+        
         } else if (msg.equals("Calculator")) {
             try {
-                Runtime.getRuntime().exec("calc.exe");
+                new ProcessBuilder("calc.exe").start();
             } catch (Exception e) {
-
+                e.printStackTrace();
             }
         } else if (msg.equals("Notepad")) {
             try {
-                Runtime.getRuntime().exec("notepad.exe");
+                new ProcessBuilder("notepad.exe").start();
             } catch (Exception e) {
-
-            }
+                e.printStackTrace();
+            
+        }
         } else if (msg.equals("New Faculty Information")) {
             new AddTeacher();
         } else if (msg.equals("New Student Information")) {
